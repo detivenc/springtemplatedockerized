@@ -1,5 +1,5 @@
 # Build stage
-FROM gradle:9.0.0-jdk-21-and-24-graal AS build
+FROM gradle:9.1.0-jdk-21-and-24-graal AS build
 WORKDIR /workspace/app
 
 # Copy build files
