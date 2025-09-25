@@ -3,7 +3,7 @@ kotlin = "2.2.10"
 springBoot = "3.5.5"
 dependencyManagement = "1.1.7"
 hibernate = "7.1.0.Final"
-graalvm = "0.11.0"
+graalvm = "0.11.1"
 vaadin = "24.8.6"
 springAi = "1.0.1"
 
