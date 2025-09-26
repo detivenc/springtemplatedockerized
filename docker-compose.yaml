@@ -52,21 +52,6 @@ services:
     networks:
       - kotlin-network
 
-  kc-oauth2.0:
-    image: quay.io/keycloak/keycloak:latest
-    container_name: keycloak-admin
-    ports:
-      - "8181:8080"
-    environment:
-      KC_BOOTSTRAP_ADMIN_USERNAME: <KEY>
-      KC_BOOTSTRAP_ADMIN_PASSWORD: <KEY>
-    command: start-dev
-    depends_on:
-      kotlin_db:
-        condition: service_healthy
-    networks:
-      - kotlin-network
-
 volumes:
   data:
 
