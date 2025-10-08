@@ -1,9 +1,8 @@
 plugins {
-  kotlin("jvm") version "2.2.20"
-	kotlin("plugin.spring") version "2.2.20"
-	id("org.springframework.boot") version "3.5.6"
-	id("io.spring.dependency-management") version "1.1.7"
-	kotlin("plugin.jpa") version "2.2.20"
+  alias(libs.plugins.kotlin.jvm)
+	alias(libs.plugins.kotlin.spring)
+	alias(libs.plugins.spring.boot)
+	alias(libs.plugins.kotlin.jpa)
 }
 
 group = "com.detivenc.github"
@@ -21,18 +20,19 @@ repositories {
 }
 
 dependencies {
-	implementation("org.springframework.boot:spring-boot-starter-actuator")
-	implementation("org.springframework.boot:spring-boot-starter-data-jpa")
-	implementation("org.springframework.boot:spring-boot-starter-graphql")
-	implementation("org.springframework.boot:spring-boot-starter-validation")
-	implementation("org.springframework.boot:spring-boot-starter-web")
-	implementation("com.fasterxml.jackson.module:jackson-module-kotlin")
-	implementation("org.jetbrains.kotlin:kotlin-reflect")
-	runtimeOnly("org.postgresql:postgresql")
-	testImplementation("org.springframework.boot:spring-boot-starter-test")
-	testImplementation("org.jetbrains.kotlin:kotlin-test-junit5")
-	testImplementation("org.springframework.graphql:spring-graphql-test")
-	testRuntimeOnly("org.junit.platform:junit-platform-launcher")
+    implementation(platform(libs.spring.boot.bom))
+	implementation(libs.spring.boot.starter.actuator)
+	implementation(libs.spring.boot.starter.data.jpa)
+	implementation(libs.spring.boot.starter.graphql)
+	implementation(libs.spring.boot.starter.validation)
+	implementation(libs.spring.boot.starter.web)
+	implementation(libs.jackson.module.kotlin)
+	implementation(libs.kotlin.reflect)
+	runtimeOnly(libs.postgresql)
+	testImplementation(libs.spring.boot.starter.test)
+	testImplementation(libs.kotlin.test.junit5)
+	testImplementation(libs.spring.graphql.test)
+	testRuntimeOnly(libs.junit.platform.launcher)
 }
 
 kotlin {
