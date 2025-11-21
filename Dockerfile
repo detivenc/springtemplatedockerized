@@ -3,10 +3,10 @@ FROM amazoncorretto:25.0.1-alpine3.22 AS build
 
 # Instalar Gradle y dependencias necesarias
 RUN apk add --no-cache wget unzip
-RUN wget https://services.gradle.org/distributions/gradle-9.0.0-bin.zip \
-    && unzip gradle-9.0.0-bin.zip \
-    && mv gradle-9.0.0 /opt/gradle \
-    && rm gradle-9.0.0-bin.zip
+RUN wget https://services.gradle.org/distributions/gradle-9.2.1-bin.zip \
+    && unzip gradle-9.2.1-bin.zip \
+    && mv gradle-9.2.1 /opt/gradle \
+    && rm gradle-9.2.1-bin.zip
 
 # JDK 25 environment variables for optimal performance
 ENV JAVA_OPTS="-XX:+UseCompactObjectHeaders -XX:+UseContainerSupport" \
