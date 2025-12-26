@@ -54,19 +54,19 @@ HEALTHCHECK --interval=30s --timeout=3s --start-period=60s --retries=3 \
     CMD wget --no-verbose --tries=1 --spider http://localhost:8080/actuator/health || exit 1
 
 # Entrypoint with JDK 25 optimizations
-ENTRYPOINT ["java", \
+ENTRYPOINT ["java",
     # JDK 25 Compact Object Headers (8-byte headers instead of 12-byte)
-    "-XX:+UseCompactObjectHeaders", \
+    "-XX:+UseCompactObjectHeaders",
     # Memory optimizations for containers
-    "-XX:+UseContainerSupport", \
-    "-XX:MaxRAMPercentage=80.0", \
+    "-XX:+UseContainerSupport",
+    "-XX:MaxRAMPercentage=80.0",
     # Garbage collection optimizations
-    "-XX:+UseG1GC", \
-    "-XX:MaxGCPauseMillis=200", \
+    "-XX:+UseG1GC",
+    "-XX:MaxGCPauseMillis=200",
     # JIT compiler optimizations
-    "-XX:+UseStringDeduplication", \
-    "-XX:+OptimizeStringConcat", \
+    "-XX:+UseStringDeduplication",
+    "-XX:+OptimizeStringConcat",
     # JDK 25 performance improvements
-    "-XX:+EnableDynamicAgentLoading", \
+    "-XX:+EnableDynamicAgentLoading",
     # Application JAR
     "-jar", "/app/spring-app.jar"]

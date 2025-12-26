@@ -38,20 +38,6 @@ services:
     networks:
       - kotlin-network
 
-  pgadmin_db:
-    image: dpage/pgadmin4:latest
-    container_name: pgadmin4_container
-    ports:
-      - "8888:80"
-    environment:
-      PGADMIN_DEFAULT_EMAIL: <KEY>
-      PGADMIN_DEFAULT_PASSWORD: <KEY>
-    depends_on:
-      kotlin_db:
-        condition: service_healthy
-    networks:
-      - kotlin-network
-
 volumes:
   data:
 

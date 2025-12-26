@@ -11,7 +11,7 @@ description = "Spring boot project with paseto"
 
 java {
 	toolchain {
-		languageVersion = JavaLanguageVersion.of(21)
+		languageVersion = JavaLanguageVersion.of(25)
 	}
 }
 
@@ -21,9 +21,7 @@ repositories {
 
 dependencies {
     implementation(platform(libs.spring.boot.bom))
-	implementation(libs.spring.boot.starter.actuator)
 	implementation(libs.spring.boot.starter.data.jpa)
-	implementation(libs.spring.boot.starter.graphql)
 	implementation(libs.spring.boot.starter.validation)
 	implementation(libs.spring.boot.starter.web)
 	implementation(libs.jackson.module.kotlin)
@@ -31,7 +29,6 @@ dependencies {
 	runtimeOnly(libs.postgresql)
 	testImplementation(libs.spring.boot.starter.test)
 	testImplementation(libs.kotlin.test.junit5)
-	testImplementation(libs.spring.graphql.test)
 	testRuntimeOnly(libs.junit.platform.launcher)
 }
 

@@ -6,9 +6,7 @@ springBoot = "4.0.1"
 spring-boot-bom = { group = "org.springframework.boot", name = "spring-boot-dependencies", version.ref = "springBoot" }
 
 # Dependencies managed by the BOM
-spring-boot-starter-actuator = { group = "org.springframework.boot", name = "spring-boot-starter-actuator" }
 spring-boot-starter-data-jpa = { group = "org.springframework.boot", name = "spring-boot-starter-data-jpa" }
-spring-boot-starter-graphql = { group = "org.springframework.boot", name = "spring-boot-starter-graphql" }
 spring-boot-starter-validation = { group = "org.springframework.boot", name = "spring-boot-starter-validation" }
 spring-boot-starter-web = { group = "org.springframework.boot", name = "spring-boot-starter-web" }
 jackson-module-kotlin = { group = "com.fasterxml.jackson.module", name = "jackson-module-kotlin" }
@@ -18,7 +16,6 @@ postgresql = { group = "org.postgresql", name = "postgresql" }
 # Testing Dependencies (managed by the BOM)
 spring-boot-starter-test = { group = "org.springframework.boot", name = "spring-boot-starter-test" }
 kotlin-test-junit5 = { group = "org.jetbrains.kotlin", name = "kotlin-test-junit5" }
-spring-graphql-test = { group = "org.springframework.graphql", name = "spring-graphql-test" }
 junit-platform-launcher = { group = "org.junit.platform", name = "junit-platform-launcher" }
 
 [plugins]
