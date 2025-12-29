@@ -23,7 +23,7 @@ spec:
             claimName: postgres-pv-claim
       containers:
       - name: postgres
-        image: postgres:15.6
+        image: postgres:latest
         env:
           - name: POSTGRES_DB
             valueFrom:
