@@ -1,5 +1,5 @@
 # Build stage con Amazon Corretto JDK 25
-FROM amazoncorretto:25.0.1-alpine3.22 AS build
+FROM amazoncorretto:25.0.2-alpine3.22 AS build
 
 # Instalar Gradle y dependencias necesarias
 RUN apk add --no-cache wget unzip
